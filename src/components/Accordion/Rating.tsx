@@ -1,12 +1,9 @@
-function Star(props: any){
-    if (props.selected === true) {
-        return <span><b>star </b></span>
-    } else {
-        return <span>star </span>
-    }         
-}  
 
-export function Rating(props: any) { 
+type RatingPropsType = {
+    value: 0 | 1 | 2 | 3 | 4 | 5
+}
+
+export function Rating(props: RatingPropsType) { 
 
     
     if (props.value === 0) {
@@ -81,3 +78,15 @@ export function Rating(props: any) {
             )
     }
 }
+
+type StarPropsType = {
+    selected: boolean
+}
+
+function Star(props: StarPropsType){
+    if (props.selected === true) {
+        return <span><b>star </b></span>
+    } else {
+        return <span>star </span>
+    }         
+}  
