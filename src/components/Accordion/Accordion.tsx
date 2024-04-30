@@ -1,15 +1,15 @@
 
-function Accordion(){
+function Accordion(props: any){
     return(
     <>
-        <AccordionTitle/>
+        <AccordionTitle title = {props.title}/>
         <AccordionBody/>
       </>
     );
 }
 
-function AccordionTitle(){
-    return(<>Menu</>);
+function AccordionTitle(props: any){
+    return(<h3>{props.title}</h3>);
   }
   
   function AccordionBody(){
